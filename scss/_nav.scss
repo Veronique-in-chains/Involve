@@ -1,0 +1,60 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  padding: 20px;
+  flex: 0 1 10%;
+  &__icon {
+    fill: black;
+  }
+}
+.menu {
+  flex: 0 0 50%;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  left: -100%;
+  @media screen and (min-width: 600px) {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    left: 0;
+  }
+  li {
+    list-style: none;
+    padding: 20px;
+  }
+  &__link {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: black;
+    &:hover {
+      font-weight: bold;
+    }
+  }
+}
+
+.active {
+  left: 0;
+}
+
+.hamburger {
+  display: block;
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}

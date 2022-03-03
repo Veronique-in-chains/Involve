@@ -1,0 +1,20 @@
+@use 'nav';
+@use 'header';
+@use 'content';
+@use 'footer';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: #333333;
+}
+
+
+
+
+

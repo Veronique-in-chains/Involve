@@ -1,0 +1,273 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  padding: 20px;
+  flex: 0 1 10%;
+}
+.logo__icon {
+  fill: black;
+}
+
+.menu {
+  flex: 0 0 50%;
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  left: -100%;
+}
+@media screen and (min-width: 600px) {
+  .menu {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    left: 0;
+  }
+}
+.menu li {
+  list-style: none;
+  padding: 20px;
+}
+.menu__link {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  color: black;
+}
+.menu__link:hover {
+  font-weight: bold;
+}
+
+.active {
+  left: 0;
+}
+
+.hamburger {
+  display: block;
+  padding: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+@media screen and (min-width: 600px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+.header {
+  background-image: url(https://picsum.photos/1600/600);
+  background-size: cover;
+  min-height: 400px;
+  color: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+  text-shadow: 1px 1px 2px black;
+}
+.header h1 {
+  font-size: 38px;
+}
+.header p {
+  margin: auto;
+  max-width: 90%;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 800px) {
+  .header p {
+    max-width: 70%;
+  }
+}
+
+.move {
+  margin-top: 250px;
+}
+
+.content {
+  background-color: #ffffff;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin: auto;
+  border-radius: 5px;
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    margin-top: -100px;
+  }
+}
+
+.gallery {
+  margin: auto;
+  width: 100%;
+  padding-bottom: 50px;
+  border-bottom: 2px solid #dfdddd;
+}
+@media screen and (min-width: 600px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.box {
+  text-align: center;
+  margin: 40px;
+  font-size: 14px;
+}
+.box__icon {
+  padding: 5px;
+  margin: auto;
+  padding: 0;
+  background-color: #dfdddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+.box__star {
+  color: #971414;
+}
+.box h2 {
+  color: #000000;
+  font-size: 16px;
+}
+
+.news {
+  margin-top: 70px;
+  text-align: center;
+}
+.news h2 {
+  margin-top: 0;
+}
+.news__intro {
+  font-size: 14px;
+}
+@media screen and (min-width: 800px) {
+  .news__intro {
+    max-width: 75%;
+    margin: auto;
+  }
+}
+
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  margin: 30px;
+  text-align: left;
+}
+.card__image {
+  width: 100%;
+}
+.card__meta {
+  color: silver;
+  font-size: 12px;
+  margin: 0;
+}
+.card__perex {
+  margin: 0;
+  font-size: 15px;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #000000;
+}
+
+.button {
+  padding: 10px 40px;
+  background-color: #971414;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.footer {
+  margin: 200px auto 0 auto;
+}
+
+.social {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+}
+.social__icon {
+  width: 40px;
+  margin: 10px;
+  fill: #333333;
+}
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+@media screen and (min-width: 600px) {
+  .links {
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+}
+.links a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  line-height: 2.5;
+  padding: 0 20px;
+}
+
+.contacts {
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 12px;
+}
+@media screen and (min-width: 800px) {
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+    border-top: 1px solid #dfdddd;
+  }
+}
+.contacts li {
+  border-bottom: 1px solid #dfdddd;
+  padding: 10px;
+}
+@media screen and (min-width: 800px) {
+  .contacts li {
+    border: none;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  color: #333333;
+}/*# sourceMappingURL=style.css.map */
